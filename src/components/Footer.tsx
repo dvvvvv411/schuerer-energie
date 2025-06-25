@@ -1,3 +1,4 @@
+
 import { Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +10,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="mb-6">
               <img 
-                src="https://i.imgur.com/ORUHBdI.png" 
+                src="https://i.imgur.com/jOSkXXt.png" 
                 alt="Schürer Energie" 
                 className="h-36 w-auto mb-4"
               />

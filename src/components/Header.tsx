@@ -9,7 +9,7 @@ const Header = () => {
           {/* Centered Logo */}
           <div className="flex-1 flex justify-center">
             <img 
-              src="https://i.imgur.com/ORUHBdI.png" 
+              src="https://i.imgur.com/jOSkXXt.png" 
               alt="Schürer Energie" 
               className="h-20 w-auto"
             />
