@@ -38,7 +38,7 @@ const UeberUns = () => {
               </p>
               <p className="text-gray-700">
                 Unser Erfolgsrezept: Persönliche Betreuung kombiniert mit innovativer Technik, 
-                faire Preise und absolute Zuverlässigkeit. Über 5.000 zufriedene Kunden 
+                faire Preise und absolute Zuverlässigkeit. Über 100.000 zufriedene Kunden 
                 vertrauen bereits auf unseren Service.
               </p>
             </div>
@@ -59,7 +59,7 @@ const UeberUns = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Kunden:</span>
-                  <span className="font-bold">5.000+</span>
+                  <span className="font-bold">100.000+</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Erfahrung:</span>
