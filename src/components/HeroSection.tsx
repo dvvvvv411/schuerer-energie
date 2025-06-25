@@ -90,8 +90,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Price Calculator */}
-          <div className="max-w-2xl mx-auto">
+          {/* Price Calculator - Removed width constraint */}
+          <div className="w-full">
             <PriceCalculator />
           </div>
         </div>
