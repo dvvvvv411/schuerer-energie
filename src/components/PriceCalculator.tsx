@@ -181,7 +181,7 @@ const PriceCalculator = () => {
         <Button 
           onClick={handleOrder}
           disabled={!postalCode || liters < 500 || isLoading}
-          className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale animate-float"
+          className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale"
         >
           {isLoading ? (
             <div className="flex items-center space-x-2">
