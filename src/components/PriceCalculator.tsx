@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { MapPin, Euro, Truck } from 'lucide-react';
+import { MapPin, Droplets, Truck } from 'lucide-react';
 
 const PriceCalculator = () => {
   const [fuelType, setFuelType] = useState('standard');
@@ -56,7 +56,7 @@ const PriceCalculator = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="glassmorphism-card p-8 animate-scale-in">
+    <div className="glassmorphism-card p-8 animate-scale-in max-w-5xl mx-auto">
       {/* Header */}
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -71,7 +71,51 @@ const PriceCalculator = () => {
       <div className="grid lg:grid-cols-2 gap-8">
         {/* Left Column - Input Fields */}
         <div className="space-y-6">
-          {/* Fuel Type Selection */}
+          {/* Postal Code Input - First */}
+          <div className="space-y-2">
+            <Label htmlFor="postal-code" className="text-base font-semibold text-gray-900">
+              Ihre Postleitzahl
+            </Label>
+            <div className="relative">
+              <Input
+                id="postal-code"
+                type="text"
+                value={postalCode}
+                onChange={(e) => setPostalCode(e.target.value)}
+                placeholder="Ihre PLZ"
+                className="text-lg pl-12"
+                maxLength={5}
+              />
+              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                <MapPin className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+          </div>
+
+          {/* Quantity Input - Second */}
+          <div className="space-y-2">
+            <Label htmlFor="liters" className="text-base font-semibold text-gray-900">
+              Menge in Litern
+            </Label>
+            <div className="relative">
+              <Input
+                id="liters"
+                type="number"
+                min="1500"
+                step="500"
+                value={liters}
+                onChange={(e) => setLiters(Number(e.target.value) || 0)}
+                placeholder="z.B. 3000"
+                className="text-lg pl-12"
+              />
+              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+                <Droplets className="w-5 h-5 text-gray-400" />
+              </div>
+            </div>
+            <p className="text-sm text-gray-500">Mindestbestellmenge: 1500 Liter</p>
+          </div>
+
+          {/* Fuel Type Selection - Third */}
           <div className="space-y-3">
             <Label className="text-base font-semibold text-gray-900">
               Heizöl-Typ wählen
@@ -103,50 +147,6 @@ const PriceCalculator = () => {
                 </div>
               </div>
             </RadioGroup>
-          </div>
-
-          {/* Quantity Input */}
-          <div className="space-y-2">
-            <Label htmlFor="liters" className="text-base font-semibold text-gray-900">
-              Menge in Litern
-            </Label>
-            <div className="relative">
-              <Input
-                id="liters"
-                type="number"
-                min="500"
-                step="500"
-                value={liters}
-                onChange={(e) => setLiters(Number(e.target.value) || 0)}
-                placeholder="z.B. 3000"
-                className="text-lg pl-12"
-              />
-              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                <Euro className="w-5 h-5 text-gray-400" />
-              </div>
-            </div>
-            <p className="text-sm text-gray-500">Mindestbestellmenge: 500 Liter</p>
-          </div>
-
-          {/* Postal Code Input */}
-          <div className="space-y-2">
-            <Label htmlFor="postal-code" className="text-base font-semibold text-gray-900">
-              Ihre Postleitzahl
-            </Label>
-            <div className="relative">
-              <Input
-                id="postal-code"
-                type="text"
-                value={postalCode}
-                onChange={(e) => setPostalCode(e.target.value)}
-                placeholder="Ihre PLZ"
-                className="text-lg pl-12"
-                maxLength={5}
-              />
-              <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
-                <MapPin className="w-5 h-5 text-gray-400" />
-              </div>
-            </div>
           </div>
         </div>
 
@@ -188,7 +188,7 @@ const PriceCalculator = () => {
           {/* CTA Button */}
           <Button 
             onClick={handleOrder}
-            disabled={!postalCode || liters < 500 || isLoading}
+            disabled={!postalCode || liters < 1500 || isLoading}
             className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale"
           >
             {isLoading ? (
