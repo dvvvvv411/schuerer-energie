@@ -11,7 +11,7 @@ const Header = () => {
             <img 
               src="https://i.imgur.com/ORUHBdI.png" 
               alt="Schürer Energie" 
-              className="h-20 w-auto"
+              className="h-40 w-auto"
             />
           </div>
 
