@@ -56,7 +56,7 @@ const PriceCalculator = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="glassmorphism-card p-8 animate-scale-in sticky top-8">
+    <div className="glassmorphism-card p-8 animate-scale-in">
       <div className="space-y-6">
         {/* Header */}
         <div className="text-center">
