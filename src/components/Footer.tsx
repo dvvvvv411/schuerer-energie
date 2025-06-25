@@ -1,4 +1,3 @@
-
 import { Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -9,7 +8,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Schürer Energie GmbH</h3>
+              <img 
+                src="https://i.imgur.com/ORUHBdI.png" 
+                alt="Schürer Energie" 
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-gray-300 leading-relaxed">
                 Ihr vertrauensvoller Partner für günstiges Heizöl seit 2018. 
                 Deutschlandweite Lieferung ab 70 Cent pro Liter.
