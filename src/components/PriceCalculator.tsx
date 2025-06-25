@@ -1,15 +1,17 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { MapPin, Droplets, Truck } from 'lucide-react';
+import { MapPin, Droplets, Truck, Shield, Check } from 'lucide-react';
 
 const PriceCalculator = () => {
   const [fuelType, setFuelType] = useState('standard');
   const [liters, setLiters] = useState<number>(3000);
   const [postalCode, setPostalCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [orderStage, setOrderStage] = useState<'idle' | 'clicked' | 'processing' | 'success'>('idle');
 
   const prices = {
     standard: 0.70,
@@ -33,10 +35,20 @@ const PriceCalculator = () => {
   };
 
   const handleOrder = async () => {
-    setIsLoading(true);
+    // Stage 1: Click animation
+    setOrderStage('clicked');
+    
+    setTimeout(() => {
+      // Stage 2: Processing
+      setOrderStage('processing');
+      setIsLoading(true);
+    }, 150);
     
     // Simuliere API-Call
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 2500));
+    
+    // Stage 3: Success
+    setOrderStage('success');
     
     const orderData = {
       shop_id: "f5184df5-8d94-4b65-9710-806b450632ba",
@@ -50,15 +62,59 @@ const PriceCalculator = () => {
 
     console.log('Order Data:', orderData);
     
-    // In der realen Implementation würde hier der Token-Request erfolgen
-    // und dann die Weiterleitung zu: https://checkout.schuerer-energie.de/checkout?token={token}
-    
-    setIsLoading(false);
+    // Success animation duration
+    setTimeout(() => {
+      setOrderStage('idle');
+      setIsLoading(false);
+    }, 1500);
   };
 
   const deliveryFee = calculateDeliveryFee(liters);
   const basePrice = liters * prices[fuelType as keyof typeof prices];
   const totalPrice = calculateTotal();
+
+  const getButtonContent = () => {
+    switch (orderStage) {
+      case 'clicked':
+        return (
+          <div className="flex items-center space-x-2">
+            <Shield className="w-5 h-5 animate-scale-in" />
+            <span>Jetzt bestellen</span>
+          </div>
+        );
+      case 'processing':
+        return (
+          <div className="flex items-center space-x-2">
+            <Shield className="w-5 h-5 animate-pulse" />
+            <span>Sichere Verarbeitung...</span>
+          </div>
+        );
+      case 'success':
+        return (
+          <div className="flex items-center space-x-2">
+            <Check className="w-5 h-5 animate-scale-in" />
+            <span>Erfolgreich!</span>
+          </div>
+        );
+      default:
+        return 'Jetzt bestellen';
+    }
+  };
+
+  const getButtonClasses = () => {
+    const baseClasses = "w-full text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale";
+    
+    switch (orderStage) {
+      case 'clicked':
+        return `${baseClasses} bg-primary hover:bg-primary/90 animate-scale-in`;
+      case 'processing':
+        return `${baseClasses} bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700`;
+      case 'success':
+        return `${baseClasses} bg-green-600 hover:bg-green-700`;
+      default:
+        return `${baseClasses} bg-primary hover:bg-primary/90`;
+    }
+  };
 
   return (
     <div className="glassmorphism-card p-8 animate-scale-in max-w-5xl mx-auto">
@@ -215,16 +271,9 @@ const PriceCalculator = () => {
           <Button 
             onClick={handleOrder}
             disabled={!postalCode || liters < 1500 || isLoading}
-            className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale"
+            className={getButtonClasses()}
           >
-            {isLoading ? (
-              <div className="flex items-center space-x-2">
-                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                <span>Wird verarbeitet...</span>
-              </div>
-            ) : (
-              'Jetzt bestellen'
-            )}
+            {getButtonContent()}
           </Button>
 
           <p className="text-center text-sm text-gray-500">
