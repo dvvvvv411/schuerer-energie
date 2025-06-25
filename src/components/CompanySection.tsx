@@ -26,7 +26,7 @@ const CompanySection = () => {
               
               <p>
                 Unser Erfolgsrezept: Faire Preise, zuverlässiger Service und die kostenlose Lieferung ab 2.000 Litern deutschlandweit. 
-                <span className="font-semibold text-gray-900"> Über 10.000 zufriedene Kunden</span> sprechen für unsere Qualität.
+                <span className="font-semibold text-gray-900"> Über 100.000 zufriedene Kunden</span> sprechen für unsere Qualität.
               </p>
             </div>
 
