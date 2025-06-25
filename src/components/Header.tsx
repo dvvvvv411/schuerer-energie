@@ -6,27 +6,14 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Centered Logo */}
+          <div className="flex-1 flex justify-center">
             <img 
               src="https://i.imgur.com/ORUHBdI.png" 
               alt="Schürer Energie" 
-              className="h-10 w-auto"
+              className="h-20 w-auto"
             />
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#preisrechner" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Preisrechner
-            </a>
-            <a href="#vorteile" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Vorteile
-            </a>
-            <a href="#kontakt" className="text-gray-700 hover:text-primary transition-colors font-medium">
-              Kontakt
-            </a>
-          </nav>
 
           {/* Contact Button */}
           <div className="flex items-center">
