@@ -1,11 +1,10 @@
-
 import { useState } from 'react';
 import PriceCalculator from './PriceCalculator';
 import { Star } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-32">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent"></div>
       
