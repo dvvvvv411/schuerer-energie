@@ -2,8 +2,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
-import InfoCard from '@/components/InfoCard';
-import { Euro, TrendingDown, Calculator, Gift } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Preise = () => {
@@ -55,95 +54,15 @@ const Preise = () => {
             </ul>
           </div>
         </div>
-      </PageSection>
-
-      {/* Mengenrabatte */}
-      <PageSection background="gray">
-        <h2 className="text-3xl font-bold text-center mb-12">Mengenrabatte</h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="glassmorphism-card p-8">
-            <div className="grid md:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-primary mb-2">1.000L+</div>
-                <div className="text-sm text-gray-600">1% Rabatt</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary mb-2">2.000L+</div>
-                <div className="text-sm text-gray-600">2% Rabatt + Kostenlose Lieferung</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary mb-2">5.000L+</div>
-                <div className="text-sm text-gray-600">3% Rabatt</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary mb-2">10.000L+</div>
-                <div className="text-sm text-gray-600">5% Rabatt</div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="text-center mt-8">
-            <p className="text-gray-600 mb-4">
-              Größere Mengen? Fordern Sie ein individuelles Angebot an!
-            </p>
-            <Button className="bg-primary hover:bg-primary/90">
-              <Calculator className="w-4 h-4 mr-2" />
-              Preis berechnen
-            </Button>
-          </div>
-        </div>
-      </PageSection>
-
-      {/* Zusatzleistungen */}
-      <PageSection>
-        <h2 className="text-3xl font-bold text-center mb-12">Zusatzleistungen & Konditionen</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <InfoCard
-            title="Lieferkosten"
-            description="Faire und transparente Lieferkonditionen je nach Entfernung und Menge."
-            icon={Euro}
-          >
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span>Bis 50 km:</span>
-                <span className="font-bold">0,05 €/L</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Bis 100 km:</span>
-                <span className="font-bold">0,08 €/L</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Ab 2.000L:</span>
-                <span className="font-bold text-green-600">Kostenlos</span>
-              </div>
-            </div>
-          </InfoCard>
-
-          <InfoCard
-            title="Zahlungskonditionen"
-            description="Flexible Zahlungsmöglichkeiten für Privat- und Geschäftskunden."
-            icon={TrendingDown}
-          >
-            <div className="space-y-2 text-sm">
-              <div>• Rechnung (14 Tage Zahlungsziel)</div>
-              <div>• Überweisung vorab (2% Skonto)</div>
-              <div>• Lastschrift möglich</div>
-              <div>• Ratenzahlung ab 5.000L</div>
-            </div>
-          </InfoCard>
-
-          <InfoCard
-            title="Stammkundenvorteile"
-            description="Exklusive Vorteile für unsere treuen Kunden mit besonderen Konditionen."
-            icon={Gift}
-          >
-            <div className="space-y-2 text-sm">
-              <div>• Feste Ansprechpartner</div>
-              <div>• Bevorzugte Liefertermine</div>
-              <div>• Sonderkonditionen bei Großmengen</div>
-              <div>• Kostenlose Tankwartung</div>
-            </div>
-          </InfoCard>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">
+            Benötigen Sie ein individuelles Angebot?
+          </p>
+          <Button className="bg-primary hover:bg-primary/90">
+            <Calculator className="w-4 h-4 mr-2" />
+            Preis berechnen
+          </Button>
         </div>
       </PageSection>
 
