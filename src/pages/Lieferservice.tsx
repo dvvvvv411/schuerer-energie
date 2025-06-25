@@ -3,11 +3,15 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
 import InfoCard from '@/components/InfoCard';
-import { Truck, Shield, Clock, Phone, CheckCircle, Star, Gauge, Users } from 'lucide-react';
+import { Truck, Shield, Clock, Calculator, CheckCircle, Star, Gauge, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Lieferservice = () => {
+  const navigateToPriceCalculator = () => {
+    window.location.href = '/#price-calculator';
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -191,20 +195,20 @@ const Lieferservice = () => {
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             Deutschlandweite Lieferung in 4-7 Werktagen. Kostenlose Lieferung ab 2.000 Liter.
-            Rufen Sie jetzt an oder berechnen Sie online Ihren Preis.
+            Berechnen Sie jetzt online Ihren individuellen Preis.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+49911123456">
+            <button onClick={navigateToPriceCalculator}>
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4">
-                <Phone className="w-5 h-5 mr-2" />
-                Jetzt anrufen & bestellen
+                <Calculator className="w-5 h-5 mr-2" />
+                zum Preisrechner
               </Button>
-            </a>
+            </button>
             
             <Link to="/preise">
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white">
-                Online Preis berechnen
+                Preise anzeigen
               </Button>
             </Link>
           </div>

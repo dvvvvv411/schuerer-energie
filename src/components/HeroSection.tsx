@@ -1,9 +1,21 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PriceCalculator from './PriceCalculator';
 import { Star } from 'lucide-react';
 
 const HeroSection = () => {
+  // Handle hash-based navigation to price calculator
+  useEffect(() => {
+    if (window.location.hash === '#price-calculator') {
+      setTimeout(() => {
+        const element = document.getElementById('price-calculator');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-50 to-white relative overflow-hidden pt-32">
       {/* Background decoration */}

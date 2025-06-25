@@ -1,5 +1,5 @@
 
-import { Phone, Menu, X } from 'lucide-react';
+import { Calculator, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -25,6 +25,19 @@ const Header = () => {
   const handleNavClick = () => {
     setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const scrollToPriceCalculator = () => {
+    if (location.pathname === '/') {
+      // If already on home page, scroll to calculator
+      const element = document.getElementById('price-calculator');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // If on different page, navigate to home then scroll
+      window.location.href = '/#price-calculator';
+    }
   };
 
   return (
@@ -62,13 +75,13 @@ const Header = () => {
 
           {/* Contact Button & Mobile Menu */}
           <div className="flex items-center space-x-4">
-            <a 
-              href="tel:+49911123456" 
+            <button 
+              onClick={scrollToPriceCalculator}
               className="hidden sm:flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-all duration-300 hover-scale"
             >
-              <Phone className="w-4 h-4" />
-              <span className="font-medium">Jetzt anrufen</span>
-            </a>
+              <Calculator className="w-4 h-4" />
+              <span className="font-medium">zum Preisrechner</span>
+            </button>
 
             {/* Mobile Menu Button */}
             <button

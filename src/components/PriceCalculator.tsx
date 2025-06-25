@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -61,7 +62,7 @@ const PriceCalculator = () => {
   const totalPrice = calculateTotal();
 
   return (
-    <div className="glassmorphism-card p-8 animate-scale-in max-w-5xl mx-auto">
+    <div id="price-calculator" className="glassmorphism-card p-8 animate-scale-in max-w-5xl mx-auto">
       {/* Header */}
       <div className="text-center mb-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">
