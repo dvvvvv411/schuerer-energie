@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
 import InfoCard from '@/components/InfoCard';
+import SEO from '@/components/SEO';
 import { Truck, Shield, Clock, Calculator, CheckCircle, Star, Gauge, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -14,6 +15,12 @@ const Lieferservice = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Deutschlandweite Heizöl-Lieferung | 4-7 Werktage | Schürer Energie"
+        description="Zuverlässige Heizöl-Lieferung deutschlandweit in 4-7 Werktagen. TÜV-geprüfte Tankfahrzeuge, kostenlose Lieferung ab 2.000L. Jetzt bestellen!"
+        keywords="Heizöl Lieferung Deutschland, Tankfahrzeuge, TÜV-geprüft, kostenlose Lieferung, Heizöl Transport"
+        canonicalUrl="https://schuerer-energie.de/lieferservice"
+      />
       <Header />
       
       {/* Hero Section */}

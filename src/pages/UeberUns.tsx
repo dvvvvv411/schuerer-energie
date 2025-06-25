@@ -3,11 +3,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
 import InfoCard from '@/components/InfoCard';
+import SEO from '@/components/SEO';
 import { Users, Award, Wrench, Heart } from 'lucide-react';
 
 const UeberUns = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Über uns & Service | Familienbetrieb seit 2018 | Schürer Energie"
+        description="Schürer Energie GmbH - Ihr vertrauensvoller Partner für Heizöl seit 2018. Familienbetrieb aus Nürnberg mit über 100.000 zufriedenen Kunden deutschlandweit."
+        keywords="Schürer Energie, Familienbetrieb, Nürnberg, Heizöl Unternehmen, seit 2018, 100000 Kunden"
+        canonicalUrl="https://schuerer-energie.de/ueber-uns"
+      />
       <Header />
       
       {/* Hero Section */}

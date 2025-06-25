@@ -2,6 +2,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
+import SEO from '@/components/SEO';
 import { Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -14,6 +15,12 @@ const Preise = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Heizöl Preise & Konditionen | Ab 70 Cent/L | Schürer Energie"
+        description="Transparente Heizöl-Preise ohne versteckte Kosten. Standard Heizöl ab 70 Cent/L, Premium ab 73 Cent/L. Preisgarantie bis zur Lieferung!"
+        keywords="Heizöl Preise, Heizöl Kosten, Preisgarantie, transparente Preise, Heizöl günstig kaufen"
+        canonicalUrl="https://schuerer-energie.de/preise"
+      />
       <Header />
       
       {/* Hero Section */}

@@ -1,10 +1,17 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const Impressum = () => {
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title="Impressum | Schürer Energie GmbH | Rechtliche Angaben"
+        description="Impressum der Schürer Energie GmbH - Alle rechtlichen Angaben, Kontaktdaten und Registereintrag. Amtsgericht Nürnberg HRB 35887."
+        keywords="Impressum, Schürer Energie GmbH, Nürnberg, HRB 35887, rechtliche Angaben"
+        canonicalUrl="https://schuerer-energie.de/impressum"
+      />
       <Header />
       
       <main className="py-20">

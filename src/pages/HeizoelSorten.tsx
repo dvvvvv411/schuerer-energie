@@ -3,11 +3,18 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
 import InfoCard from '@/components/InfoCard';
+import SEO from '@/components/SEO';
 import { Shield, Droplets, Thermometer } from 'lucide-react';
 
 const HeizoelSorten = () => {
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Heizöl-Sorten | Standard & Premium Heizöl | Schürer Energie"
+        description="Hochwertige Heizöl-Sorten: Standard Heizöl EL ab 70 Cent/L und Premium Heizöl Plus ab 73 Cent/L. Schwefelarm, DIN-Norm konform. Jetzt bestellen!"
+        keywords="Heizöl Sorten, Standard Heizöl EL, Premium Heizöl Plus, schwefelarmes Heizöl, DIN 51603-1"
+        canonicalUrl="https://schuerer-energie.de/heizoelsorten"
+      />
       <Header />
       
       {/* Hero Section */}
