@@ -7,6 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Preise = () => {
+  const scrollToPriceCalculator = () => {
+    // Navigate to home page and scroll to calculator
+    window.location.href = '/#price-calculator';
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -60,12 +65,13 @@ const Preise = () => {
           <p className="text-gray-600 mb-4">
             Benötigen Sie ein individuelles Angebot?
           </p>
-          <a href="tel:+49911123456">
-            <Button className="bg-primary hover:bg-primary/90">
-              <Calculator className="w-4 h-4 mr-2" />
-              Preis berechnen
-            </Button>
-          </a>
+          <Button 
+            onClick={scrollToPriceCalculator}
+            className="bg-primary hover:bg-primary/90"
+          >
+            <Calculator className="w-4 h-4 mr-2" />
+            zum Preisrechner
+          </Button>
         </div>
       </PageSection>
 
