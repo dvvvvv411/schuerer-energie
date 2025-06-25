@@ -10,6 +10,10 @@ import HeizoelSorten from "./pages/HeizoelSorten";
 import Lieferservice from "./pages/Lieferservice";
 import Preise from "./pages/Preise";
 import UeberUns from "./pages/UeberUns";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import AGB from "./pages/AGB";
+import Widerrufsrecht from "./pages/Widerrufsrecht";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +29,10 @@ const App = () => (
           <Route path="/lieferservice" element={<Lieferservice />} />
           <Route path="/preise" element={<Preise />} />
           <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/agb" element={<AGB />} />
+          <Route path="/widerrufsrecht" element={<Widerrufsrecht />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

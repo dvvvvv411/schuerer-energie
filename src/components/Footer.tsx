@@ -1,4 +1,6 @@
+
 import { Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -42,8 +44,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#preisrechner" className="text-gray-300 hover:text-primary transition-colors">Preisrechner</a></li>
               <li><a href="#kontakt" className="text-gray-300 hover:text-primary transition-colors">Kontakt</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">FAQ</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Lieferbedingungen</a></li>
+              <li><Link to="/preise" className="text-gray-300 hover:text-primary transition-colors">Preise</Link></li>
+              <li><Link to="/lieferservice" className="text-gray-300 hover:text-primary transition-colors">Lieferbedingungen</Link></li>
             </ul>
           </div>
 
@@ -51,10 +53,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Rechtliches</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Impressum</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Datenschutz</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">AGB</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-primary transition-colors">Widerrufsrecht</a></li>
+              <li><Link to="/impressum" className="text-gray-300 hover:text-primary transition-colors">Impressum</Link></li>
+              <li><Link to="/datenschutz" className="text-gray-300 hover:text-primary transition-colors">Datenschutz</Link></li>
+              <li><Link to="/agb" className="text-gray-300 hover:text-primary transition-colors">AGB</Link></li>
+              <li><Link to="/widerrufsrecht" className="text-gray-300 hover:text-primary transition-colors">Widerrufsrecht</Link></li>
             </ul>
           </div>
         </div>
