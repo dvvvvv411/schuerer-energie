@@ -6,6 +6,7 @@ import TrustSection from '@/components/TrustSection';
 import CompanySection from '@/components/CompanySection';
 import Footer from '@/components/Footer';
 import SEO from '@/components/SEO';
+import PriceCalculator from '@/components/PriceCalculator';
 import { companyStructuredData, localBusinessStructuredData } from '@/data/structuredData';
 
 const Index = () => {
@@ -24,6 +25,11 @@ const Index = () => {
       <HeroSection />
       <USPSection />
       <TrustSection />
+      <div className="py-16 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="container mx-auto px-4">
+          <PriceCalculator />
+        </div>
+      </div>
       <CompanySection />
       <Footer />
     </div>

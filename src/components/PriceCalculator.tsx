@@ -1,16 +1,19 @@
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { MapPin, Droplets, Truck } from 'lucide-react';
+import { useCheckout } from '@/hooks/useCheckout';
+import { OrderData } from '@/services/orderService';
 
 const PriceCalculator = () => {
   const [fuelType, setFuelType] = useState('standard');
   const [liters, setLiters] = useState<number>(3000);
   const [postalCode, setPostalCode] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  
+  const { processOrder, isProcessing } = useCheckout();
 
   const prices = {
     standard: 0.70,
@@ -34,12 +37,16 @@ const PriceCalculator = () => {
   };
 
   const handleOrder = async () => {
-    setIsLoading(true);
+    // Validate inputs
+    if (!postalCode || postalCode.length !== 5) {
+      return;
+    }
     
-    // Simuliere API-Call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    const orderData = {
+    if (liters < 1500) {
+      return;
+    }
+
+    const orderData: OrderData = {
       shop_id: "f5184df5-8d94-4b65-9710-806b450632ba",
       product: fuelType === "standard" ? "standard_heizoel" : "premium_heizoel",
       liters: liters,
@@ -49,12 +56,7 @@ const PriceCalculator = () => {
       postal_code: postalCode
     };
 
-    console.log('Order Data:', orderData);
-    
-    // In der realen Implementation würde hier der Token-Request erfolgen
-    // und dann die Weiterleitung zu: https://checkout.schuerer-energie.de/checkout?token={token}
-    
-    setIsLoading(false);
+    await processOrder(orderData);
   };
 
   const deliveryFee = calculateDeliveryFee(liters);
@@ -215,10 +217,10 @@ const PriceCalculator = () => {
           {/* CTA Button */}
           <Button 
             onClick={handleOrder}
-            disabled={!postalCode || liters < 1500 || isLoading}
+            disabled={!postalCode || postalCode.length !== 5 || liters < 1500 || isProcessing}
             className="w-full bg-primary hover:bg-primary/90 text-white text-lg py-6 rounded-xl font-semibold transition-all hover-scale"
           >
-            {isLoading ? (
+            {isProcessing ? (
               <div className="flex items-center space-x-2">
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                 <span>Wird verarbeitet...</span>
