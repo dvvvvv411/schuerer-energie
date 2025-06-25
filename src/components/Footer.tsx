@@ -1,4 +1,3 @@
-
 import { Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -12,7 +11,7 @@ const Footer = () => {
               <img 
                 src="https://i.imgur.com/jOSkXXt.png" 
                 alt="Schürer Energie" 
-                className="h-36 w-auto mb-4"
+                className="h-16 w-auto mb-4"
               />
               <p className="text-gray-300 leading-relaxed">
                 Ihr vertrauensvoller Partner für günstiges Heizöl seit 2018. 

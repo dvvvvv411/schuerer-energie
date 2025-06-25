@@ -1,4 +1,5 @@
 
+
 import { Phone } from 'lucide-react';
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
             <img 
               src="https://i.imgur.com/jOSkXXt.png" 
               alt="Schürer Energie" 
-              className="h-20 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
@@ -32,3 +33,4 @@ const Header = () => {
 };
 
 export default Header;
+
