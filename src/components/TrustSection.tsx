@@ -34,7 +34,7 @@ const TrustSection = () => {
             Was unsere <span className="gradient-text">Kunden sagen</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Über 10.000 zufriedene Kunden vertrauen bereits auf unseren Service. 
+            Über 100.000 zufriedene Kunden vertrauen bereits auf unseren Service. 
             Lesen Sie selbst, was sie über uns sagen.
           </p>
         </div>

@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PageSection from '@/components/PageSection';
 import { Calculator } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Preise = () => {
   return (
@@ -59,10 +60,12 @@ const Preise = () => {
           <p className="text-gray-600 mb-4">
             Benötigen Sie ein individuelles Angebot?
           </p>
-          <Button className="bg-primary hover:bg-primary/90">
-            <Calculator className="w-4 h-4 mr-2" />
-            Preis berechnen
-          </Button>
+          <a href="tel:+49911123456">
+            <Button className="bg-primary hover:bg-primary/90">
+              <Calculator className="w-4 h-4 mr-2" />
+              Preis berechnen
+            </Button>
+          </a>
         </div>
       </PageSection>
 

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import PriceCalculator from './PriceCalculator';
 import { Star } from 'lucide-react';
@@ -50,7 +51,7 @@ const HeroSection = () => {
 
               <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-purple-50 border border-purple-100">
                 <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-purple-600 font-bold text-lg">6+</span>
+                  <span className="text-purple-600 font-bold text-lg">7+</span>
                 </div>
                 <div className="text-center">
                   <p className="font-semibold text-gray-900">Jahre</p>
@@ -71,7 +72,7 @@ const HeroSection = () => {
                     <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <span className="text-sm font-medium">Über 10.000 zufriedene Kunden vertrauen uns</span>
+                <span className="text-sm font-medium">Über 100.000 zufriedene Kunden vertrauen uns</span>
               </div>
             </div>
           </div>

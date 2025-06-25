@@ -1,6 +1,6 @@
 
 import { Phone, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -17,13 +17,23 @@ const Header = () => {
 
   const isActive = (href: string) => location.pathname === href;
 
+  // Auto-scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [location.pathname]);
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/">
+          {/* Logo - Centered on mobile */}
+          <div className="flex items-center lg:flex-none flex-1 lg:flex-initial justify-center lg:justify-start">
+            <Link to="/" onClick={handleNavClick}>
               <img 
                 src="https://i.imgur.com/jOSkXXt.png" 
                 alt="Schürer Energie" 
@@ -38,6 +48,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={handleNavClick}
                 className={`text-sm font-medium transition-colors ${
                   isActive(item.href)
                     ? 'text-primary border-b-2 border-primary'
@@ -62,7 +73,7 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors absolute right-4"
             >
               {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -77,7 +88,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={handleNavClick}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? 'bg-primary text-white'

@@ -5,6 +5,7 @@ import PageSection from '@/components/PageSection';
 import InfoCard from '@/components/InfoCard';
 import { Truck, Shield, Clock, Phone, CheckCircle, Star, Gauge, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Lieferservice = () => {
   return (
@@ -55,7 +56,7 @@ const Lieferservice = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Warum Schürer Energie?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <InfoCard
-            title="Über 6 Jahre Erfahrung"
+            title="Über 7 Jahre Erfahrung"
             description="Seit 2018 vertrauen deutschlandweit Kunden auf unsere Zuverlässigkeit und Expertise."
             icon={Star}
           />
@@ -67,8 +68,8 @@ const Lieferservice = () => {
           />
 
           <InfoCard
-            title="10.000+ Kunden"
-            description="Über 10.000 zufriedene Kunden vertrauen bereits auf unseren Service."
+            title="100.000+ Kunden"
+            description="Über 100.000 zufriedene Kunden vertrauen bereits auf unseren Service."
             icon={Users}
           />
 
@@ -194,14 +195,18 @@ const Lieferservice = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4">
-              <Phone className="w-5 h-5 mr-2" />
-              Jetzt anrufen & bestellen
-            </Button>
+            <a href="tel:+49911123456">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-lg px-8 py-4">
+                <Phone className="w-5 h-5 mr-2" />
+                Jetzt anrufen & bestellen
+              </Button>
+            </a>
             
-            <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white">
-              Online Preis berechnen
-            </Button>
+            <Link to="/preise">
+              <Button variant="outline" size="lg" className="text-lg px-8 py-4 border-2 border-primary text-primary hover:bg-primary hover:text-white">
+                Online Preis berechnen
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-8 flex items-center justify-center space-x-2 text-gray-600">
@@ -210,7 +215,7 @@ const Lieferservice = () => {
                 <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
               ))}
             </div>
-            <span className="text-sm">Über 10.000 zufriedene Kunden deutschlandweit</span>
+            <span className="text-sm">Über 100.000 zufriedene Kunden deutschlandweit</span>
           </div>
         </div>
       </PageSection>

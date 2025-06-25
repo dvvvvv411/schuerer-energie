@@ -18,8 +18,8 @@ const USPSection = () => {
     {
       icon: Shield,
       title: "Seit 2018 vertrauenswürdig",
-      description: "Über 6 Jahre Erfahrung und tausende zufriedene Kunden sprechen für unsere Qualität und Zuverlässigkeit im Heizöl-Handel.",
-      highlight: "10.000+ Kunden"
+      description: "Über 7 Jahre Erfahrung und hunderttausende zufriedene Kunden sprechen für unsere Qualität und Zuverlässigkeit im Heizöl-Handel.",
+      highlight: "100.000+ Kunden"
     }
   ];
 
@@ -73,7 +73,7 @@ const USPSection = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="text-4xl font-bold text-primary mb-2">10.000+</div>
+            <div className="text-4xl font-bold text-primary mb-2">100.000+</div>
             <div className="text-gray-600">Zufriedene Kunden</div>
           </div>
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -81,7 +81,7 @@ const USPSection = () => {
             <div className="text-gray-600">Liter geliefert</div>
           </div>
           <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <div className="text-4xl font-bold text-primary mb-2">6+</div>
+            <div className="text-4xl font-bold text-primary mb-2">7+</div>
             <div className="text-gray-600">Jahre Erfahrung</div>
           </div>
           <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
