@@ -13,16 +13,6 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto space-y-16">
           {/* Main Content */}
           <div className="space-y-8 animate-fade-in text-center">
-            {/* Trust Indicator */}
-            <div className="flex items-center justify-center space-x-2 text-muted-foreground">
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <span className="text-sm font-medium">Über 10.000 zufriedene Kunden vertrauen uns</span>
-            </div>
-
             {/* Main Headlines */}
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
@@ -75,17 +65,14 @@ const HeroSection = () => {
               <p className="text-lg lg:text-xl text-gray-600 mb-6">
                 Berechnen Sie jetzt Ihren individuellen Preis und sparen Sie bis zu 30% gegenüber lokalen Anbietern!
               </p>
-              <div className="flex items-center justify-center space-x-4">
-                <div className="flex -space-x-2">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="w-10 h-10 bg-gray-300 rounded-full border-2 border-white"></div>
+              {/* Trust Indicator - moved here */}
+              <div className="flex items-center justify-center space-x-2 text-muted-foreground">
+                <div className="flex space-x-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <div>
-                  <p className="text-sm text-gray-600">
-                    <span className="font-semibold text-gray-900">2.847 Kunden</span> haben diese Woche bestellt
-                  </p>
-                </div>
+                <span className="text-sm font-medium">Über 10.000 zufriedene Kunden vertrauen uns</span>
               </div>
             </div>
           </div>
