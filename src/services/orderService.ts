@@ -18,7 +18,7 @@ export class OrderService {
   private static readonly CHECKOUT_BASE_URL = 'https://checkout.schuerer-energie.de/checkout';
 
   static async createOrderToken(orderData: OrderData): Promise<string> {
-    const response = await fetch(`${this.API_BASE_URL}/get-order-token`, {
+    const response = await fetch(`${this.API_BASE_URL}/create-order-token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
