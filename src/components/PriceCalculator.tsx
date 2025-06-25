@@ -1,9 +1,10 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { MapPin, Droplets, Truck } from 'lucide-react';
+import { MapPin, Droplets, Truck, ShieldCheck, CreditCard } from 'lucide-react';
 
 const PriceCalculator = () => {
   const [fuelType, setFuelType] = useState('standard');
@@ -226,6 +227,44 @@ const PriceCalculator = () => {
               'Jetzt bestellen'
             )}
           </Button>
+
+          {/* Secure Payment Indicator */}
+          <div className="bg-green-50 border border-green-200 rounded-xl p-4 animate-fade-in">
+            <div className="flex items-center justify-center space-x-6">
+              {/* Shield Icon */}
+              <div className="flex flex-col items-center">
+                <div className="bg-green-100 p-3 rounded-full mb-2 animate-pulse">
+                  <ShieldCheck className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="text-xs text-green-700 font-medium">SSL Sicher</span>
+              </div>
+
+              {/* Animated Connection Line */}
+              <div className="flex-1 relative">
+                <div className="h-0.5 bg-green-200 rounded-full overflow-hidden">
+                  <div className="h-full bg-green-500 rounded-full animate-[slide-in-right_2s_ease-in-out_infinite]"></div>
+                </div>
+              </div>
+
+              {/* Credit Card Icon */}
+              <div className="flex flex-col items-center">
+                <div className="bg-green-100 p-3 rounded-full mb-2 animate-pulse">
+                  <CreditCard className="w-6 h-6 text-green-600" />
+                </div>
+                <span className="text-xs text-green-700 font-medium">Sicher bezahlen</span>
+              </div>
+            </div>
+            
+            {/* Trust Message */}
+            <div className="text-center mt-3">
+              <p className="text-sm text-green-800 font-semibold">
+                🔒 Ihre Zahlung wird sicher verschlüsselt übertragen
+              </p>
+              <p className="text-xs text-green-600 mt-1">
+                256-Bit SSL-Verschlüsselung • PCI-DSS zertifiziert
+              </p>
+            </div>
+          </div>
 
           <p className="text-center text-sm text-gray-500">
             Kostenloser und unverbindlicher Preischeck
