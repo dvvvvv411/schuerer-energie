@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -17,7 +16,7 @@ const PriceCalculator = () => {
     premium: 0.73
   };
 
-  const quickSelectAmounts = [1500, 3000, 5000];
+  const quickSelectAmounts = [1500, 3000, 5000, 10000];
 
   const calculateDeliveryFee = (literAmount: number) => {
     return literAmount >= 2000 ? 0 : 45; // 45€ Liefergebühr unter 2000L
