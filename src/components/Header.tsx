@@ -1,23 +1,56 @@
 
-
-import { Phone } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Startseite', href: '/' },
+    { name: 'Heizöl-Sorten', href: '/heizoelsorten' },
+    { name: 'Lieferservice', href: '/lieferservice' },
+    { name: 'Preise & Konditionen', href: '/preise' },
+    { name: 'Über uns & Service', href: '/ueber-uns' },
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glassmorphism border-b border-white/20">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-24">
-          {/* Centered Logo */}
-          <div className="flex-1 flex justify-center">
-            <img 
-              src="https://i.imgur.com/jOSkXXt.png" 
-              alt="Schürer Energie" 
-              className="h-12 w-auto"
-            />
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/">
+              <img 
+                src="https://i.imgur.com/jOSkXXt.png" 
+                alt="Schürer Energie" 
+                className="h-12 w-auto hover-scale"
+              />
+            </Link>
           </div>
 
-          {/* Contact Button */}
-          <div className="flex items-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? 'text-primary border-b-2 border-primary'
+                    : 'text-gray-700 hover:text-primary'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Contact Button & Mobile Menu */}
+          <div className="flex items-center space-x-4">
             <a 
               href="tel:+49911123456" 
               className="hidden sm:flex items-center space-x-2 bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary/90 transition-all duration-300 hover-scale"
@@ -25,12 +58,41 @@ const Header = () => {
               <Phone className="w-4 h-4" />
               <span className="font-medium">Jetzt anrufen</span>
             </a>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden py-4 border-t border-white/20">
+            <nav className="flex flex-col space-y-2">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                    isActive(item.href)
+                      ? 'bg-primary text-white'
+                      : 'text-gray-700 hover:bg-gray-100'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
 };
 
 export default Header;
-
