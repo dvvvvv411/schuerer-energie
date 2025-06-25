@@ -17,6 +17,8 @@ const PriceCalculator = () => {
     premium: 0.73
   };
 
+  const quickSelectAmounts = [1500, 3000, 5000];
+
   const calculateDeliveryFee = (literAmount: number) => {
     return literAmount >= 2000 ? 0 : 45; // 45€ Liefergebühr unter 2000L
   };
@@ -25,6 +27,10 @@ const PriceCalculator = () => {
     const basePrice = liters * prices[fuelType as keyof typeof prices];
     const deliveryFee = calculateDeliveryFee(liters);
     return basePrice + deliveryFee;
+  };
+
+  const handleQuickSelect = (amount: number) => {
+    setLiters(amount);
   };
 
   const handleOrder = async () => {
@@ -93,7 +99,7 @@ const PriceCalculator = () => {
           </div>
 
           {/* Quantity Input - Second */}
-          <div className="space-y-2">
+          <div className="space-y-3">
             <Label htmlFor="liters" className="text-base font-semibold text-gray-900">
               Menge in Litern
             </Label>
@@ -112,6 +118,27 @@ const PriceCalculator = () => {
                 <Droplets className="w-5 h-5 text-gray-400" />
               </div>
             </div>
+            
+            {/* Quick Select Buttons */}
+            <div className="space-y-2">
+              <p className="text-sm text-gray-600">Beliebte Mengen:</p>
+              <div className="flex flex-wrap gap-2">
+                {quickSelectAmounts.map((amount) => (
+                  <button
+                    key={amount}
+                    onClick={() => handleQuickSelect(amount)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all hover:scale-105 ${
+                      liters === amount
+                        ? 'bg-primary text-white shadow-md'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {amount.toLocaleString()}L
+                  </button>
+                ))}
+              </div>
+            </div>
+            
             <p className="text-sm text-gray-500">Mindestbestellmenge: 1500 Liter</p>
           </div>
 
