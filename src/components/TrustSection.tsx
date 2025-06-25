@@ -58,8 +58,8 @@ const TrustSection = () => {
           </div>
 
           <div className="text-center glassmorphism-card p-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <div className="text-3xl font-bold text-primary mb-2">&lt;24h</div>
-            <div className="text-gray-600 mb-2">Lieferzeit</div>
+            <div className="text-3xl font-bold text-primary mb-2">4-7</div>
+            <div className="text-gray-600 mb-2">Werktage</div>
             <div className="text-sm text-gray-500">deutschlandweit</div>
           </div>
 
