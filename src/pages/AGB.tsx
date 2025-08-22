@@ -15,7 +15,7 @@ const AGB = () => {
             <div className="space-y-8 text-gray-700">
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 1 Geltungsbereich</h2>
-                <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Geschäftsbeziehungen zwischen der Schürer Energie GmbH (nachfolgend "Verkäufer") und ihren Kunden (nachfolgend "Käufer"). Abweichende Bedingungen des Käufers werden nicht anerkannt, es sei denn, der Verkäufer stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
+                <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Geschäftsbeziehungen zwischen der Gsmart GmbH (nachfolgend "Verkäufer") und ihren Kunden (nachfolgend "Käufer"). Abweichende Bedingungen des Käufers werden nicht anerkannt, es sei denn, der Verkäufer stimmt ihrer Geltung ausdrücklich schriftlich zu.</p>
               </section>
 
               <section>

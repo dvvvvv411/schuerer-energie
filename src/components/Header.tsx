@@ -49,7 +49,7 @@ const Header = () => {
             <Link to="/" onClick={handleNavClick}>
               <img 
                 src="https://i.imgur.com/jOSkXXt.png" 
-                alt="Schürer Energie" 
+                alt="Gsmart" 
                 className="h-12 w-auto hover-scale"
               />
             </Link>

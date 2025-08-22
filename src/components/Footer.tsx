@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="mb-6">
               <img 
                 src="https://i.imgur.com/jOSkXXt.png" 
-                alt="Schürer Energie" 
+                alt="Gsmart" 
                 className="h-16 w-auto mb-4"
               />
               <p className="text-gray-300 leading-relaxed">
@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span className="text-gray-300">Fürther Str. 252, 90402 Nürnberg</span>
+                <span className="text-gray-300">Rheinpromenade 4 a, 40789 Monheim a. Rhein</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
@@ -38,10 +38,10 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
                 <a 
-                  href="mailto:info@schuerer-energie.de" 
+                  href="mailto:info@smartheizoel.de" 
                   className="text-gray-300 hover:text-primary transition-colors"
                 >
-                  info@schuerer-energie.de
+                  info@smartheizoel.de
                 </a>
               </div>
             </div>
@@ -74,8 +74,8 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              <p>© 2025 Schürer Energie GmbH. Alle Rechte vorbehalten.</p>
-              <p>Amtsgericht Nürnberg HRB 35887 | USt-ID: DE363251118</p>
+              <p>© 2025 Gsmart GmbH. Alle Rechte vorbehalten.</p>
+              <p>Amtsgericht Düsseldorf HRB 107383 | USt-ID: DE363251118</p>
             </div>
             
             <div className="flex items-center space-x-6">

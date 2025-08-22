@@ -27,10 +27,10 @@ const Datenschutz = () => {
                 <h3 className="text-lg font-semibold mb-2 mt-4">Verantwortliche Stelle</h3>
                 <div className="space-y-2">
                   <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
-                  <p><strong>Schürer Energie GmbH</strong></p>
-                  <p>Fürther Str. 252</p>
-                  <p>90402 Nürnberg</p>
-                  <p>E-Mail: info@schuerer-energie.de</p>
+                  <p><strong>Gsmart GmbH</strong></p>
+                  <p>Rheinpromenade 4 a</p>
+                  <p>40789 Monheim a. Rhein</p>
+                  <p>E-Mail: info@smartheizoel.de</p>
                 </div>
               </section>
 

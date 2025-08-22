@@ -6,10 +6,10 @@ const Impressum = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <SEO
-        title="Impressum | Schürer Energie GmbH | Rechtliche Angaben"
-        description="Impressum der Schürer Energie GmbH - Alle rechtlichen Angaben, Kontaktdaten und Registereintrag. Amtsgericht Nürnberg HRB 35887."
-        keywords="Impressum, Schürer Energie GmbH, Nürnberg, HRB 35887, rechtliche Angaben"
-        canonicalUrl="https://schuerer-energie.de/impressum"
+        title="Impressum | Gsmart GmbH | Rechtliche Angaben"
+        description="Impressum der Gsmart GmbH - Alle rechtlichen Angaben, Kontaktdaten und Registereintrag. Amtsgericht Düsseldorf HRB 107383."
+        keywords="Impressum, Gsmart GmbH, Monheim, HRB 107383, rechtliche Angaben"
+        canonicalUrl="https://smartheizoel.de/impressum"
       />
       <Header />
       
@@ -22,9 +22,9 @@ const Impressum = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Angaben gemäß § 5 TMG</h2>
                 <div className="space-y-2">
-                  <p><strong>Schürer Energie GmbH</strong></p>
-                  <p>Fürther Str. 252</p>
-                  <p>90402 Nürnberg</p>
+                  <p><strong>Gsmart GmbH</strong></p>
+                  <p>Rheinpromenade 4 a</p>
+                  <p>40789 Monheim a. Rhein</p>
                   <p>Deutschland</p>
                 </div>
               </section>
@@ -33,7 +33,7 @@ const Impressum = () => {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Kontakt</h2>
                 <div className="space-y-2">
                   <p><strong>Telefon:</strong> 0217 385 229 38</p>
-                  <p><strong>E-Mail:</strong> info@schuerer-energie.de</p>
+                  <p><strong>E-Mail:</strong> info@smartheizoel.de</p>
                 </div>
               </section>
 
@@ -41,8 +41,8 @@ const Impressum = () => {
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Registereintrag</h2>
                 <div className="space-y-2">
                   <p><strong>Eintragung im Handelsregister:</strong></p>
-                  <p>Registergericht: Amtsgericht Nürnberg</p>
-                  <p>Registernummer: HRB 35887</p>
+                  <p>Registergericht: Amtsgericht Düsseldorf</p>
+                  <p>Registernummer: HRB 107383</p>
                 </div>
               </section>
 
@@ -55,9 +55,9 @@ const Impressum = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
                 <div className="space-y-2">
-                  <p>Schürer Energie GmbH</p>
-                  <p>Fürther Str. 252</p>
-                  <p>90402 Nürnberg</p>
+                  <p>Gsmart GmbH</p>
+                  <p>Rheinpromenade 4 a</p>
+                  <p>40789 Monheim a. Rhein</p>
                 </div>
               </section>
 

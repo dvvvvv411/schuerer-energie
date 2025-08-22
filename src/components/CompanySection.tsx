@@ -9,7 +9,7 @@ const CompanySection = () => {
           {/* Company Info */}
           <div className="animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Über <span className="gradient-text">Schürer Energie</span>
+              Über <span className="gradient-text">Gsmart</span>
             </h2>
             
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
@@ -75,8 +75,8 @@ const CompanySection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Unser Standort</h4>
                     <p className="text-gray-600">
-                      Fürther Str. 252<br />
-                      90402 Nürnberg<br />
+                      Rheinpromenade 4 a<br />
+                      40789 Monheim a. Rhein<br />
                       Deutschland
                     </p>
                   </div>
@@ -90,10 +90,10 @@ const CompanySection = () => {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">E-Mail Kontakt</h4>
                     <a 
-                      href="mailto:info@schuerer-energie.de" 
+                      href="mailto:info@smartheizoel.de" 
                       className="text-primary hover:text-primary/80 transition-colors font-medium"
                     >
-                      info@schuerer-energie.de
+                      info@smartheizoel.de
                     </a>
                   </div>
                 </div>
@@ -117,8 +117,8 @@ const CompanySection = () => {
               <div className="border-t pt-6">
                 <h4 className="font-semibold text-gray-900 mb-3">Rechtliche Angaben</h4>
                 <div className="space-y-1 text-sm text-gray-600">
-                  <p>Schürer Energie GmbH</p>
-                  <p>Amtsgericht Nürnberg HRB 35887</p>
+                  <p>Gsmart GmbH</p>
+                  <p>Amtsgericht Düsseldorf HRB 107383</p>
                   <p>USt-ID: DE363251118</p>
                 </div>
               </div>

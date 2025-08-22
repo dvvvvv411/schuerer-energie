@@ -16,10 +16,10 @@ const Lieferservice = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Deutschlandweite Heizöl-Lieferung | 4-7 Werktage | Schürer Energie"
+        title="Deutschlandweite Heizöl-Lieferung | 4-7 Werktage | Gsmart"
         description="Zuverlässige Heizöl-Lieferung deutschlandweit in 4-7 Werktagen. TÜV-geprüfte Tankfahrzeuge, kostenlose Lieferung ab 2.000L. Jetzt bestellen!"
         keywords="Heizöl Lieferung Deutschland, Tankfahrzeuge, TÜV-geprüft, kostenlose Lieferung, Heizöl Transport"
-        canonicalUrl="https://schuerer-energie.de/lieferservice"
+        canonicalUrl="https://smartheizoel.de/lieferservice"
       />
       <Header />
       
@@ -64,7 +64,7 @@ const Lieferservice = () => {
 
       {/* Warum Schürer Energie? */}
       <PageSection>
-        <h2 className="text-3xl font-bold text-center mb-12">Warum Schürer Energie?</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Warum Gsmart?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <InfoCard
             title="Über 7 Jahre Erfahrung"

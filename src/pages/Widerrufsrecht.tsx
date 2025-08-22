@@ -23,10 +23,10 @@ const Widerrufsrecht = () => {
                 <h3 className="text-lg font-semibold mb-2 mt-6">Ausübung des Widerrufsrechts</h3>
                 <p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns</p>
                 <div className="ml-4 mt-2 space-y-1">
-                  <p><strong>Schürer Energie GmbH</strong></p>
-                  <p>Fürther Str. 252</p>
-                  <p>90402 Nürnberg</p>
-                  <p>E-Mail: info@schuerer-energie.de</p>
+                  <p><strong>Gsmart GmbH</strong></p>
+                  <p>Rheinpromenade 4 a</p>
+                  <p>40789 Monheim a. Rhein</p>
+                  <p>E-Mail: info@smartheizoel.de</p>
                 </div>
                 <p className="mt-2">mittels einer eindeutigen Erklärung (z.B. ein mit der Post versandter Brief oder E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren.</p>
               </section>
@@ -52,8 +52,8 @@ const Widerrufsrecht = () => {
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
                   <p className="font-semibold mb-4">Wenn Sie den Vertrag widerrufen wollen, dann füllen Sie bitte dieses Formular aus und senden Sie es zurück:</p>
                   <div className="space-y-2 text-sm">
-                    <p>An: Schürer Energie GmbH, Fürther Str. 252, 90402 Nürnberg</p>
-                    <p>E-Mail: info@schuerer-energie.de</p>
+                    <p>An: Gsmart GmbH, Rheinpromenade 4 a, 40789 Monheim a. Rhein</p>
+                    <p>E-Mail: info@smartheizoel.de</p>
                     <br />
                     <p>Hiermit widerrufe(n) ich/wir (*) den von mir/uns (*) abgeschlossenen Vertrag über den Kauf der folgenden Waren (*):</p>
                     <p>_________________________________</p>

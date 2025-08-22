@@ -10,10 +10,10 @@ const UeberUns = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Über uns & Service | Familienbetrieb seit 2018 | Schürer Energie"
-        description="Schürer Energie GmbH - Ihr vertrauensvoller Partner für Heizöl seit 2018. Familienbetrieb aus Nürnberg mit über 100.000 zufriedenen Kunden deutschlandweit."
-        keywords="Schürer Energie, Familienbetrieb, Nürnberg, Heizöl Unternehmen, seit 2018, 100000 Kunden"
-        canonicalUrl="https://schuerer-energie.de/ueber-uns"
+        title="Über uns & Service | Familienbetrieb seit 2018 | Gsmart"
+        description="Gsmart GmbH - Ihr vertrauensvoller Partner für Heizöl seit 2018. Familienbetrieb aus Monheim mit über 100.000 zufriedenen Kunden deutschlandweit."
+        keywords="Gsmart, Familienbetrieb, Monheim, Heizöl Unternehmen, seit 2018, 100000 Kunden"
+        canonicalUrl="https://smartheizoel.de/ueber-uns"
       />
       <Header />
       
@@ -33,7 +33,7 @@ const UeberUns = () => {
       {/* Unternehmen */}
       <PageSection>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Schürer Energie GmbH</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Gsmart GmbH</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-2xl font-bold mb-4 text-primary">Unsere Geschichte</h3>
@@ -168,10 +168,10 @@ const UeberUns = () => {
             <div className="glassmorphism-card p-8">
               <h3 className="text-xl font-bold mb-4">Firmenadresse</h3>
               <div className="space-y-3 text-gray-700">
-                <p className="font-bold">Schürer Energie GmbH</p>
-                <p>Fürther Str. 252<br/>90402 Nürnberg</p>
+                <p className="font-bold">Gsmart GmbH</p>
+                <p>Rheinpromenade 4 a<br/>40789 Monheim a. Rhein</p>
                 <p>
-                  <strong>E-Mail:</strong> info@schuerer-energie.de<br/>
+                  <strong>E-Mail:</strong> info@smartheizoel.de<br/>
                   <strong>Telefon:</strong> 0217 385 229 38
                 </p>
               </div>
@@ -180,7 +180,7 @@ const UeberUns = () => {
             <div className="glassmorphism-card p-8">
               <h3 className="text-xl font-bold mb-4">Rechtliche Angaben</h3>
               <div className="space-y-2 text-gray-700 text-sm">
-                <p><strong>Amtsgericht:</strong> Nürnberg HRB 35887</p>
+                <p><strong>Amtsgericht:</strong> Düsseldorf HRB 107383</p>
                 <p><strong>USt-ID:</strong> DE363251118</p>
                 <p><strong>Geschäftsführer:</strong> Max Schürer</p>
                 <p><strong>Gründung:</strong> 2018</p>

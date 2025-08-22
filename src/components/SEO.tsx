@@ -47,7 +47,7 @@ const SEO = ({
     updateMetaTag('og:description', description, true);
     updateMetaTag('og:type', ogType, true);
     updateMetaTag('og:image', ogImage, true);
-    updateMetaTag('og:site_name', 'Schürer Energie', true);
+    updateMetaTag('og:site_name', 'Gsmart', true);
 
     // Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image');

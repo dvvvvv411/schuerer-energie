@@ -2,22 +2,22 @@
 export const companyStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Schürer Energie GmbH",
-  "alternateName": "Schürer Energie",
-  "url": "https://schuerer-energie.de",
+  "name": "Gsmart GmbH",
+  "alternateName": "Gsmart",
+  "url": "https://smartheizoel.de",
   "logo": "https://i.imgur.com/jOSkXXt.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+49-911-123456",
+    "telephone": "+49-217-385229-38",
     "contactType": "customer service",
-    "email": "info@schuerer-energie.de",
+    "email": "info@smartheizoel.de",
     "availableLanguage": "German"
   },
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Fürther Str. 252",
-    "addressLocality": "Nürnberg",
-    "postalCode": "90402",
+    "streetAddress": "Rheinpromenade 4 a",
+    "addressLocality": "Monheim a. Rhein",
+    "postalCode": "40789",
     "addressCountry": "DE"
   },
   "foundingDate": "2018",
@@ -39,24 +39,24 @@ export const companyStructuredData = {
     "availability": "https://schema.org/InStock"
   },
   "sameAs": [
-    "https://www.facebook.com/schuererenergie",
-    "https://www.instagram.com/schuererenergie"
+    "https://www.facebook.com/smartheizoel",
+    "https://www.instagram.com/smartheizoel"
   ]
 };
 
 export const localBusinessStructuredData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Schürer Energie GmbH",
+  "name": "Gsmart GmbH",
   "image": "https://i.imgur.com/jOSkXXt.png",
-  "@id": "https://schuerer-energie.de",
-  "url": "https://schuerer-energie.de",
-  "telephone": "+49-911-123456",
+  "@id": "https://smartheizoel.de",
+  "url": "https://smartheizoel.de",
+  "telephone": "+49-217-385229-38",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Fürther Str. 252",
-    "addressLocality": "Nürnberg",
-    "postalCode": "90402",
+    "streetAddress": "Rheinpromenade 4 a",
+    "addressLocality": "Monheim a. Rhein",
+    "postalCode": "40789",
     "addressCountry": "DE"
   },
   "geo": {

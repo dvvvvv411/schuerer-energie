@@ -28,7 +28,7 @@ const USPSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Warum <span className="gradient-text">Schürer Energie</span>?
+            Warum <span className="gradient-text">Gsmart</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Seit 2018 sind wir Ihr vertrauensvoller Partner für günstiges Heizöl in ganz Deutschland. 
