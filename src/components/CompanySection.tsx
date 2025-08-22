@@ -15,7 +15,7 @@ const CompanySection = () => {
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
                 Seit 2018 sind wir Ihr vertrauensvoller Partner für günstige und hochwertige Heizöl-Lieferungen in ganz Deutschland. 
-                Als modernes Unternehmen aus Nürnberg haben wir uns auf die direkte Belieferung von Privat- und Geschäftskunden spezialisiert.
+                Als modernes Unternehmen aus Monheim a. Rhein haben wir uns auf die direkte Belieferung von Privat- und Geschäftskunden spezialisiert.
               </p>
               
               <p>

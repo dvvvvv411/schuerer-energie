@@ -24,7 +24,7 @@ const UeberUns = () => {
             Über uns & <span className="gradient-text">Unser Service</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Seit 2018 Ihr vertrauensvoller Partner für Heizöl in Nürnberg und ganz Deutschland. 
+            Seit 2018 Ihr vertrauensvoller Partner für Heizöl in Monheim a. Rhein und ganz Deutschland. 
             Familienbetrieb mit Tradition und modernster Technik.
           </p>
         </div>
@@ -38,7 +38,7 @@ const UeberUns = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4 text-primary">Unsere Geschichte</h3>
               <p className="text-gray-700 mb-4">
-                Gegründet 2018 in Nürnberg, haben wir uns als zuverlässiger Heizöllieferant 
+                Gegründet 2018 in Monheim a. Rhein, haben wir uns als zuverlässiger Heizöllieferant 
                 in der Region etabliert. Was als lokaler Familienbetrieb begann, ist heute 
                 ein deutschlandweit agierendes Unternehmen mit modernsten Tankfahrzeugen 
                 und digitalen Bestell- und Lieferprozessen.
@@ -58,7 +58,7 @@ const UeberUns = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Standort:</span>
-                  <span className="font-bold">Nürnberg</span>
+                  <span className="font-bold">Monheim a. Rhein</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Liefergebiet:</span>

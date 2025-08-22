@@ -62,7 +62,7 @@ const AGB = () => {
 
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">§ 8 Schlussbestimmungen</h2>
-                <p>Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten ist Nürnberg, sofern der Käufer Kaufmann ist.</p>
+                <p>Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts. Gerichtsstand für alle Streitigkeiten ist Düsseldorf, sofern der Käufer Kaufmann ist.</p>
               </section>
             </div>
           </div>

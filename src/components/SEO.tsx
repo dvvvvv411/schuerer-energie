@@ -14,7 +14,7 @@ interface SEOProps {
 const SEO = ({ 
   title, 
   description, 
-  keywords = "Heizöl, günstig, Lieferung, Nürnberg, Deutschland, 70 Cent",
+  keywords = "Heizöl, günstig, Lieferung, Monheim a. Rhein, Deutschland, 70 Cent",
   ogImage = "https://i.imgur.com/jOSkXXt.png",
   ogType = "website",
   canonicalUrl,
