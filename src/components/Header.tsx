@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex items-center lg:flex-none flex-1 lg:flex-initial justify-center lg:justify-start">
             <Link to="/" onClick={handleNavClick}>
               <img 
-                src="https://i.imgur.com/jOSkXXt.png" 
+                src="/lovable-uploads/13e95491-5022-4284-bd23-053e28db70a9.png" 
                 alt="Gsmart" 
                 className="h-12 w-auto hover-scale"
               />
