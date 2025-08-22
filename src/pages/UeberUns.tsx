@@ -172,7 +172,7 @@ const UeberUns = () => {
                 <p>Fürther Str. 252<br/>90402 Nürnberg</p>
                 <p>
                   <strong>E-Mail:</strong> info@schuerer-energie.de<br/>
-                  <strong>Telefon:</strong> 0911 96 64 35 04
+                  <strong>Telefon:</strong> 0217 385 229 38
                 </p>
               </div>
             </div>

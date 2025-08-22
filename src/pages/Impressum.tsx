@@ -32,7 +32,7 @@ const Impressum = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Kontakt</h2>
                 <div className="space-y-2">
-                  <p><strong>Telefon:</strong> 0911 96 64 35 04</p>
+                  <p><strong>Telefon:</strong> 0217 385 229 38</p>
                   <p><strong>E-Mail:</strong> info@schuerer-energie.de</p>
                 </div>
               </section>
