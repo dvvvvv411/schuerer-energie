@@ -8,6 +8,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    allowedHosts: ["smartheizoel.de", "www.smartheizoel.de", "checkout.smartheizoel.de"]
+  },
+  preview: {
+    host: "::",
+    port: 4173
   },
   plugins: [
     react(),
